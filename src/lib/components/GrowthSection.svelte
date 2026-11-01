@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { reveal } from '$lib/actions/reveal';
-	import { imageUrl } from '$lib/utils/assets';
+
 
 	let { openQuoteModal }: { openQuoteModal: () => void } = $props();
 </script>
@@ -9,7 +9,6 @@
 	<div class="wave" aria-hidden="true"></div>
 	<h1>
 		Coverage<br />That Grows<br />With You
-		<img class="growth-butterfly" src={imageUrl('butterfly.svg')} alt="" aria-hidden="true" />
 	</h1>
 	<p>
 		Whether you need car, home, health, travel, or business insurance, we help you find flexible

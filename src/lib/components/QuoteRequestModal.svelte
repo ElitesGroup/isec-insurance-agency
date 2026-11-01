@@ -89,8 +89,8 @@
 			{/if}
 			<textarea rows="5" placeholder="Description" bind:value={message} required></textarea>
 			<div class="quote-form-actions">
-				<button type="submit" class="quote-submit">Get free quote</button>
 				<button type="button" class="quote-clear" onclick={clearAll}>Clear all</button>
+				<button type="submit" class="quote-submit">Get free quote</button>
 			</div>
 		</form>
 	</dialog>

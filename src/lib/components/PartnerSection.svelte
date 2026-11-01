@@ -6,7 +6,7 @@
 
 <section class="partner-section reveal" id="partners" use:reveal>
 	<div class="wave-divider" aria-hidden="true"></div>
-	<h2>We work with 100+ companies to find the best match for you!</h2>
+	<h2>We work with 10+ companies to find the best match for you!</h2>
 	<div class="partner-marquee">
 		<div>
 			{#each partners as partner (partner.name)}

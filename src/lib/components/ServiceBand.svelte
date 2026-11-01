@@ -5,7 +5,7 @@
 </script>
 
 <section class="service-band reveal" id="services" use:reveal>
-	<h2>We offer a variety of products customer designed for all your insurance needs being;</h2>
+	<h2>We offer a variety of tailor made products designed for all your insurance needs;</h2>
 	<div class="service-grid">
 		{#each supportFeatures as feature, index (feature.title)}
 			<article>

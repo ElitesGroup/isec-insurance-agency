@@ -27,6 +27,11 @@
 		closeCoverageMenu();
 		trackEvent('nav_click', { sectionId });
 	}
+
+	function handleContactClick() {
+		closeCoverageMenu();
+		trackEvent('nav_click', { sectionId: 'contact' });
+	}
 </script>
 
 <nav class="site-nav reveal is-revealed" use:reveal>
@@ -51,7 +56,7 @@
 		<a href={sectionHref('services')} onclick={() => handleNavClick('services')}>Services</a>
 		<a href={sectionHref('partners')} onclick={() => handleNavClick('partners')}>Company</a>
 		<a href={sectionHref('support')} onclick={() => handleNavClick('support')}>Support</a>
-		<a href={sectionHref('support')} onclick={() => handleNavClick('support')}>Contact Us</a>
+		<a href="#contact" onclick={handleContactClick}>Contact Us</a>
 	</div>
 
 	<div class="nav-actions">
@@ -59,11 +64,8 @@
 			<img src={imageUrl('mail.svg')} alt="" loading="lazy" decoding="async" />
 			<span>Send message</span>
 		</a>
-		<button class="icon-button" type="button" aria-label="Search">
-			<img src={imageUrl('Frame 3054.svg')} alt="" loading="lazy" decoding="async" />
-		</button>
 		<button
-			class="primary-button"
+			class="hero-whatsapp-button"
 			type="button"
 			aria-controls="coverage-menu"
 			aria-expanded={isCoverageMenuOpen}
@@ -71,5 +73,12 @@
 		>
 			Get Coverage
 		</button>
+		<a
+				class="hero-whatsapp-button"
+				href="https://api.whatsapp.com/send/?phone=%2B254113821287&text=Hi+I-Sec+Insurance+Agency+Customer+Support&type=phone_number&app_absent=0"
+				target="_blank"
+				rel="noreferrer"
+		>Whatsapp us</a
+		>
 	</div>
 </nav>

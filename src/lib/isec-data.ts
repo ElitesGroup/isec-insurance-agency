@@ -129,20 +129,20 @@ export const supportFeatures = [
 
 export const metrics: readonly MetricCard[] = [
 	{
-		value: '50+',
+		value: '10+',
 		label: 'Insurance Partners',
 		body: 'Access quotes from a trusted network of providers.',
 		image: 'african.jpg',
 		tone: 'photo'
 	},
 	{
-		value: '15K+',
+		value: '10K+',
 		label: 'Policies Matched',
 		body: 'Helping customers secure reliable coverage every single year.',
 		tone: 'orange'
 	},
 	{
-		value: '40%',
+		value: '20%',
 		label: 'Cost Savings',
 		body: 'Compare rates side by side and discover better value in minutes.',
 		tone: 'blue'
@@ -150,14 +150,14 @@ export const metrics: readonly MetricCard[] = [
 	{
 		value: '24/7',
 		label: 'Expert Support',
-		body: 'Dedicated agents ready to guide you through every step of your insurance journey.',
+		body: 'Dedicated agent ready to guide you through every step of your insurance journey.',
 		image: 'Rectangle 17.svg',
 		tone: 'gold'
 	},
 	{
 		value: '98%',
 		label: 'Customer Satisfaction',
-		body: 'Fast, transparent, and stress-free insurance comparisons customers trust.',
+		body: 'Fast, transparent, and stress-free insurance services that customers trust.',
 		image: 'customer.jpg',
 		tone: 'photo'
 	}

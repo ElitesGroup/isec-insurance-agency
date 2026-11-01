@@ -58,19 +58,7 @@
 					fetchpriority={index === activeProductIndex ? 'high' : 'low'}
 					decoding="async"
 				/>
-				<span class="product-title">
-					{product.title}
-					{#if index === activeProductIndex}
-						<img
-							class="product-butterfly"
-							src={imageUrl('butterfly.svg')}
-							alt=""
-							aria-hidden="true"
-							loading="lazy"
-							decoding="async"
-						/>
-					{/if}
-				</span>
+				<span class="product-title">{product.title}</span>
 				{#if index === activeProductIndex}
 					<span class="product-divider" aria-hidden="true"></span>
 					<span class="product-copy">{product.body}</span>

@@ -221,6 +221,7 @@ button {
 .nav-actions {
 	justify-content: flex-end;
 	gap: 12px;
+	margin-right: 69px;
 }
 
 .message-link {
@@ -430,6 +431,7 @@ button {
 	width: 100%;
 	height: 112%;
 	object-fit: cover;
+	border-radius: inherit;
 	transition:
 		transform 760ms cubic-bezier(0.2, 0.8, 0.2, 1),
 		filter 320ms ease;
@@ -453,7 +455,6 @@ button {
 	font-size: clamp(2rem, 3vw, 2.1rem);
 	font-weight: 900;
 	line-height: 0.85;
-	text-transform: uppercase;
 	animation: content-pop 260ms ease both;
 }
 
@@ -470,8 +471,9 @@ button {
 	min-height: 58px;
 	align-items: center;
 	gap: 8px;
+	margin-top: 20px;
 	padding: 0 26px;
-	border-radius: 999px;
+	border-radius: 7px;
 	color: #fff;
 	background: #960B0A;
 	font-size: clamp(1rem, 1.12vw, 1.18rem);
@@ -543,7 +545,11 @@ button {
 	min-height: 0;
 	overflow: hidden;
 	cursor: pointer;
+	border: 0;
+	appearance: none;
+	-webkit-appearance: none;
 	border-radius: 18px;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
 	color: white;
 	background: rgb(255 255 255 / 7%);
 	box-shadow: none;
@@ -561,6 +567,7 @@ button {
 	inset: 0;
 	z-index: 1;
 	pointer-events: none;
+	border-radius: inherit;
 	background:
 		linear-gradient(116deg, transparent 0 38%, rgb(255 255 255 / 8%) 48%, transparent 58%),
 		linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(255 255 255 / 0%) 34%);
@@ -572,25 +579,24 @@ button {
 		transform 760ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.product-card.is-active::before {
-	animation: glass-sweep 4.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+.product-card::after {
+	border-radius: inherit;
 }
 
-.product-card-wide {
-	flex-basis: clamp(440px, 40vw, 600px);
+.product-card > img:not(.product-butterfly) {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 112%;
+	object-fit: cover;
+	border-radius: inherit;
+	transition:
+		transform 760ms cubic-bezier(0.2, 0.8, 0.2, 1),
+		filter 320ms ease;
 }
 
-.product-card:hover,
-.product-card.is-active {
-	filter: saturate(1.03) contrast(1.01);
-	box-shadow: inset 0 0 0 1px rgb(251 131 82 / 26%);
-	transform: translateY(-4px);
-}
-
-.product-card:hover::before,
-.product-card.is-active::before {
-	opacity: 0.5;
-	transform: translateX(10%);
+.product-card[data-product='home'] > img:not(.product-butterfly) {
+	object-position: center;
 }
 
 .product-title {
@@ -598,9 +604,11 @@ button {
 	z-index: 2;
 	left: clamp(22px, 3vw, 40px);
 	bottom: clamp(52px, 4vw, 68px);
+	color: #fff;
 	font-size: clamp(2.35rem, 4.1vw, 4.25rem);
 	font-weight: 900;
 	line-height: 0.8;
+	text-shadow: 0 6px 16px rgb(0 0 0 / 48%);
 }
 
 .product-card.is-active .product-title {
@@ -609,24 +617,7 @@ button {
 
 .product-card:not(.product-card-wide) .product-title {
 	font-size: clamp(1.75rem, 2.35vw, 2.55rem);
-}
-
-.product-card:not(.product-card-wide) .product-title {
 	bottom: 34px;
-}
-
-.product-card .product-butterfly {
-	position: static;
-	display: inline-block;
-	width: 0.78em;
-	height: 0.78em;
-	margin-top: -0.12em;
-	margin-left: 0.04em;
-	object-fit: contain;
-	vertical-align: top;
-	pointer-events: none;
-	filter: drop-shadow(0 6px 10px rgb(0 0 0 / 28%));
-	animation: butterfly-hover 3.8s ease-in-out infinite;
 }
 
 .product-divider {
@@ -973,7 +964,7 @@ button {
 	max-width: 720px;
 	margin: 0;
 	color: white;
-	font-size: clamp(2.9rem, 6.6vw, 4.0rem);
+	font-size: clamp(2.9rem, 6.6vw, 2.6rem);
 	font-weight: 900;
 	line-height: 0.88;
 	text-transform: uppercase;
@@ -1385,6 +1376,28 @@ button {
 	font-weight: 700;
 }
 
+.hero-whatsapp-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 46px;
+	padding: 0 24px;
+	border-radius: 7px;
+	color: #fff;
+	background:var(--ink);
+	font-size: 0.95rem;
+	font-weight: 800;
+	letter-spacing: 0.01em;
+	text-transform: none;
+	box-shadow: 0 12px 28px rgb(251 131 82 / 28%);
+	transition: transform 160ms ease, background 160ms ease;
+}
+
+.hero-whatsapp-button:hover {
+	background: var(--aqua);
+	transform: translateY(-3px);
+}
+
 .faq-whatsapp-button {
 	display: inline-flex;
 	align-items: center;
@@ -1793,7 +1806,7 @@ button {
 		grid-column: 1 / -1;
 		display: flex;
 		justify-content: flex-start;
-		gap: 10px;
+		gap: 12px;
 		width: 100%;
 		margin-top: 30px;
 	}
@@ -2306,9 +2319,19 @@ button {
 	cursor: pointer;
 }
 
+.quote-clear:hover {
+	background: var(--line);
+	transform: translateY(-3px);
+}
+
 .quote-submit {
 	color: #fff;
 	background: var(--ink);
+}
+
+.quote-submit:hover {
+	background: var(--aqua);
+	transform: translateY(-2px);
 }
 
 .quote-clear {
