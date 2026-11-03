@@ -32,17 +32,8 @@ npm run dev
 | `npm run preview` | Serves the production build locally. |
 | `npm run check` | Runs Svelte type checking and validation. |
 
-## Project Structure
 
-```
-src/
-├── lib/
-│   ├── components/
-│   ├── assets/
-│   ├── utils/
-│   └── isec-data.ts
-├── routes/
-└── app.html
+
 ```
 
 ## Development
