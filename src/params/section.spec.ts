@@ -3,12 +3,13 @@ import { match } from './section';
 
 describe('section param matcher', () => {
 	it('accepts all supported section slugs', () => {
-		expect.assertions(5);
+		expect.assertions(6);
 		expect(match('cover')).toBe(true);
 		expect(match('services')).toBe(true);
 		expect(match('quote')).toBe(true);
 		expect(match('partners')).toBe(true);
 		expect(match('support')).toBe(true);
+		expect(match('contact')).toBe(true);
 	});
 
 	it('rejects unsupported section slugs', () => {

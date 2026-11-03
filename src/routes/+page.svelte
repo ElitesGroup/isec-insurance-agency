@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import CoverageMenu from '$lib/components/CoverageMenu.svelte';
 	import FloatingSectionNav from '$lib/components/FloatingSectionNav.svelte';
@@ -27,9 +28,36 @@
 	const proofSectionModule = import('$lib/components/ProofSection.svelte');
 	const faqSectionModule = import('$lib/components/FaqSection.svelte');
 	const siteFooterModule = import('$lib/components/SiteFooter.svelte');
+	const pathSections = new Set(['cover', 'services', 'quote', 'partners', 'support', 'contact']);
 
 	function sectionHref(sectionId: SectionId) {
-		return sectionId === 'top' ? '#top' : `#${sectionId}`;
+		return sectionId === 'top' ? '/' : `/${sectionId}`;
+	}
+
+	function sectionIdFromPath(pathname: string) {
+		const sectionId = pathname.replace(/^\/+|\/+$/g, '');
+		if (!sectionId) return 'top';
+		return pathSections.has(sectionId) ? sectionId : null;
+	}
+
+	function scrollToSectionFromPath(behavior: ScrollBehavior = 'auto', retries = 0) {
+		const sectionId = sectionIdFromPath(window.location.pathname);
+		if (!sectionId) return;
+
+		if (sectionId === 'top') {
+			window.scrollTo({ top: 0, behavior });
+			return;
+		}
+
+		const section = document.getElementById(sectionId);
+		if (section) {
+			section.scrollIntoView({ behavior, block: 'start' });
+			return;
+		}
+
+		if (retries < 30) {
+			window.setTimeout(() => scrollToSectionFromPath(behavior, retries + 1), 50);
+		}
 	}
 
 	function closeCoverageMenu() {
@@ -89,11 +117,18 @@
 			productTimer = setInterval(nextProduct, 20000);
 		}
 
+		scrollToSectionFromPath('auto');
+
 		return () => {
 			window.removeEventListener('scroll', scheduleScrollStateSync);
 			if (scrollFrame !== undefined) window.cancelAnimationFrame(scrollFrame);
 			if (productTimer) clearInterval(productTimer);
 		};
+	});
+
+	afterNavigate(() => {
+		if (typeof window === 'undefined') return;
+		scrollToSectionFromPath('smooth');
 	});
 </script>
 

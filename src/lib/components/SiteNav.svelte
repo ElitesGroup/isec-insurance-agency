@@ -56,7 +56,7 @@
 		<a href={sectionHref('services')} onclick={() => handleNavClick('services')}>Services</a>
 		<a href={sectionHref('partners')} onclick={() => handleNavClick('partners')}>Company</a>
 		<a href={sectionHref('support')} onclick={() => handleNavClick('support')}>Support</a>
-		<a href="#contact" onclick={handleContactClick}>Contact Us</a>
+		<a href="/contact" onclick={handleContactClick}>Contact Us</a>
 	</div>
 
 	<div class="nav-actions">

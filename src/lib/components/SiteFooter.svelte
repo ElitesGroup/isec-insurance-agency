@@ -58,8 +58,12 @@
 		</a>
 	</div>
 	<div class="footer-legal">
-		<a href="/terms-and-conditions">Terms & Conditions</a>
-		<a href="/privacy-policy">Privacy Policy</a>
+		<a href="/legal/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer"
+			>Terms & Conditions</a
+		>
+		<a href="/legal/privacy-policy.pdf" target="_blank" rel="noopener noreferrer"
+			>Privacy Policy</a
+		>
 		<span>&copy;{currentYear}, I-Sec Insurance Agency. All rights reserved.</span>
 	</div>
 </footer>
