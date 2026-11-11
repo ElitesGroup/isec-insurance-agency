@@ -22,7 +22,7 @@
 
 <div class="cover-panel cover-dropdown reveal is-revealed" id="coverage-menu" use:reveal>
 	<div class="cover-list">
-		<p class="eyebrow">Insurance Cover</p>
+		<p class="eyebrow">Products</p>
 		{#each coverages as coverage, index (coverage.title)}
 			<button
 				class:is-selected={activeCoverageIndex === index}

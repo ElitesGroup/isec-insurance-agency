@@ -41,29 +41,21 @@
 		aria-label="I-SEC Insurance Agency home"
 		onclick={() => handleNavClick('top')}
 	>
-		<img
-			class="brand-logo"
-			src={imageUrl('i-sec.png')}
-			alt="I-SEC Insurance Agency"
-			decoding="async"
-		/>
+		<img class="brand-logo" src={imageUrl('isec.svg')} alt="I-SEC Insurance Agency" decoding="async" />
 	</a>
 
 	<div class="nav-links" aria-label="Primary navigation">
 		<button class="nav-link-button" type="button" onclick={handleCoverageToggle}
-			>Insurance Cover</button
+			>Products</button
 		>
 		<a href={sectionHref('services')} onclick={() => handleNavClick('services')}>Services</a>
 		<a href={sectionHref('partners')} onclick={() => handleNavClick('partners')}>Company</a>
 		<a href={sectionHref('support')} onclick={() => handleNavClick('support')}>Support</a>
-		<a href="/contact" onclick={handleContactClick}>Contact Us</a>
+		<a href="/contact" onclick={handleContactClick}>Contacts</a>
+		<a class="message-link" href="mailto:hello@isec.co.ke" aria-label="Send message">Message</a>
 	</div>
 
 	<div class="nav-actions">
-		<a class="message-link" href="mailto:hello@isec.co.ke" aria-label="Send message">
-			<img src={imageUrl('mail.svg')} alt="" loading="lazy" decoding="async" />
-			<span>Send message</span>
-		</a>
 		<button
 			class="hero-whatsapp-button"
 			type="button"
@@ -74,10 +66,10 @@
 			Get Coverage
 		</button>
 		<a
-				class="hero-whatsapp-button"
-				href="https://api.whatsapp.com/send/?phone=%2B254113821287&text=Hi+I-Sec+Insurance+Agency+Customer+Support&type=phone_number&app_absent=0"
-				target="_blank"
-				rel="noreferrer"
+			class="hero-whatsapp-button"
+			href="https://api.whatsapp.com/send/?phone=%2B254113821287&text=Hi+I-Sec+Insurance+Agency+Customer+Support&type=phone_number&app_absent=0"
+			target="_blank"
+			rel="noreferrer"
 		>Whatsapp us</a
 		>
 	</div>

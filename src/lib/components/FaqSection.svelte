@@ -18,14 +18,6 @@
 			Questions on the I-Sec Insurance? Find your answers below. For any further help or
 			troubleshooting, please contact customer service.
 		</p>
-		<a
-			class="faq-whatsapp-button"
-			href="https://api.whatsapp.com/send/?phone=%2B254113821287&text=Hi+I-Sec+Insurance+Agency+Customer+Support&type=phone_number&app_absent=0"
-			target="_blank"
-			rel="noreferrer"
-			>Whatsapp us now</a
-		>
-
 		<div class="faq-list">
 			{#each faqs as faq, index (faq.question)}
 				<article class:is-open={openFaqIndex === index} class="faq-item">

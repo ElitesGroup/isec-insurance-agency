@@ -61,7 +61,7 @@
 		<a href="/legal/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer"
 			>Terms & Conditions</a
 		>
-		<a href="/legal/privacy-policy.pdf" target="_blank" rel="noopener noreferrer"
+		<a href="/privacy-policy" target="_blank" rel="noopener noreferrer"
 			>Privacy Policy</a
 		>
 		<span>&copy;{currentYear}, I-Sec Insurance Agency. All rights reserved.</span>
