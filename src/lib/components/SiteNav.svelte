@@ -23,6 +23,11 @@
 		trackEvent('coverage_menu_toggle', { isOpening: !isCoverageMenuOpen });
 	}
 
+	function handleCoverageLinkClick() {
+		closeCoverageMenu();
+		trackEvent('external_link_click', { destination: 'kraaltech' });
+	}
+
 	function handleNavClick(sectionId: SectionId) {
 		closeCoverageMenu();
 		trackEvent('nav_click', { sectionId });
@@ -56,15 +61,15 @@
 	</div>
 
 	<div class="nav-actions">
-		<button
+		<a
 			class="hero-whatsapp-button"
-			type="button"
-			aria-controls="coverage-menu"
-			aria-expanded={isCoverageMenuOpen}
-			onclick={handleCoverageToggle}
+			href="https://kraaltech.com/"
+			target="_blank"
+			rel="noreferrer"
+			onclick={handleCoverageLinkClick}
 		>
 			Get Coverage
-		</button>
+		</a>
 		<a
 			class="hero-whatsapp-button"
 			href="https://api.whatsapp.com/send/?phone=%2B254113821287&text=Hi+I-Sec+Insurance+Agency+Customer+Support&type=phone_number&app_absent=0"

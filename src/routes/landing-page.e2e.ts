@@ -10,10 +10,10 @@ test('section navigation and faq interaction work', async ({ page }) => {
 	await expect(page.getByText('compare different providers and coverage types')).toBeVisible();
 });
 
-test('coverage menu opens from the primary call to action', async ({ page }) => {
+test('coverage menu opens from products navigation', async ({ page }) => {
 	await page.goto('/');
 
-	await page.getByRole('button', { name: 'Get Coverage' }).click();
+	await page.getByRole('button', { name: 'Products' }).click();
 
 	await expect(page.locator('#coverage-menu')).toBeVisible();
 	await expect(page.locator('.cover-item')).toHaveCount(8);

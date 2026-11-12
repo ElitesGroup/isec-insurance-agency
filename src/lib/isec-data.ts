@@ -26,56 +26,56 @@ export const coverages: readonly CoverageCategory[] = [
 	{
 		title: 'Life Insurance',
 		description: 'Financial support to beneficiaries after the insured person dies.',
-		icon: '6897 1.svg',
+		icon: '6897 1.png',
 		previewTitle: 'Life Insurance',
 		previewImage: 'Screenshot 2026-04-27 at 21.35.44 1.svg'
 	},
 	{
 		title: 'Education Insurance',
 		description: "Plan ahead for a child's future education expenses.",
-		icon: '6897 2.svg',
+		icon: '6897 2.png',
 		previewTitle: 'Education Insurance',
 		previewImage: 'education.jpg'
 	},
 	{
 		title: 'Health Insurance',
 		description: 'Medical expenses such as hospital visits, treatments, and medicines.',
-		icon: '6897 4.svg',
+		icon: '6897 4.png',
 		previewTitle: 'Medical Insurance',
 		previewImage: 'Screenshot 2026-04-27 at 21.39.26 1.svg'
 	},
 	{
 		title: 'Personal Accident Insurance',
 		description: "Coverage for injuries, disabilities, or death resulting from accidents.",
-		icon: '6897 5.svg',
+		icon: '6897 5.png',
 		previewTitle: 'Personal Accident Insurance',
 		previewImage: 'personal_accident.jpg'
 	},
 	{
 		title: 'Home Insurance',
 		description: 'Damage or loss to a house and belongings due to fire, theft, or disasters.',
-		icon: '6897 6.svg',
+		icon: '6897 6.png',
 		previewTitle: 'Home Insurance',
 		previewImage: 'home_insurance.jpg'
 	},
 	{
 		title: 'Marine Insurance',
 		description: 'Ships, cargo, and goods transported by sea or waterways.',
-		icon: '6897 7.svg',
+		icon: '6897 7.png',
 		previewTitle: 'Marine Insurance',
 		previewImage: 'marine-cargo.jpg'
 	},
 	{
 		title: 'Travel Insurance',
 		description: 'Trip cancellations, medical emergencies, and lost luggage.',
-		icon: '6897 2.svg',
+		icon: '6897 2.png',
 		previewTitle: 'Travel Insurance',
 		previewImage: 'travel_insurance.jpg'
 	},
 	{
 		title: 'Motor Insurance',
 		description: 'Coverage for private cars, commercial fleets, and daily movement.',
-		icon: '6897 8.svg',
+		icon: '6897 8.png',
 		previewTitle: 'Motor Insurance',
 		previewImage: 'car-guy.png'
 	}

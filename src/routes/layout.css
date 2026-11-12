@@ -286,7 +286,8 @@ button {
 	border: 1px solid rgb(255 255 255 / 14%);
 	border-radius: 18px;
 	background:
-		linear-gradient(118deg, rgb(255 255 255 / 13%), rgb(255 255 255 / 3%) 42%), rgb(2 7 32 / 64%);
+		linear-gradient(118deg, rgb(255 255 255 / 13%), rgb(255 255 255 / 3%) 42%),
+		rgb(0 14 75 / 78%);
 	box-shadow:
 		var(--shadow-soft),
 		inset 0 1px 0 rgb(255 255 255 / 11%);
@@ -296,7 +297,7 @@ button {
 .cover-dropdown {
 	position: absolute;
 	z-index: 18;
-	top: 132px;
+	top: 142px;
 	right: clamp(24px, 7vw, 160px);
 	left: clamp(24px, 7vw, 160px);
 	transform-origin: 78% 0;
@@ -313,7 +314,7 @@ button {
 .eyebrow {
 	grid-column: 1 / -1;
 	margin: 0 0 -8px;
-	color: rgb(255 176 142 / 80%);
+	color: rgb(255 220 232 / 84%);
 	font-size: 0.68rem;
 	font-weight: 900;
 	letter-spacing: 0.18em;
@@ -339,7 +340,7 @@ button {
 
 .cover-item:hover,
 .cover-item.is-selected {
-	background: rgb(251 131 82 / 12%);
+	background: rgb(189 15 44 / 20%);
 	transform: translateX(4px);
 }
 
@@ -357,6 +358,7 @@ button {
 	width: 25px;
 	height: 25px;
 	object-fit: contain;
+	filter: brightness(1.08);
 }
 
 .cover-item strong,
@@ -1147,7 +1149,7 @@ button {
 .metric-gold strong,
 .metric-gold h3,
 .metric-gold p {
-	color: #9d1515;
+	color: var(--ink);
 }
 
 .metric-gold img {
@@ -1901,12 +1903,7 @@ button {
 	}
 
 	.nav-actions {
-		grid-column: 1 / -1;
-		display: flex;
-		justify-content: flex-start;
-		gap: 12px;
-		width: 100%;
-		margin-top: 30px;
+		display: none;
 	}
 
 	.message-link {

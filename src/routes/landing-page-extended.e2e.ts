@@ -23,7 +23,7 @@ test('carousel controls change active product and dot state', async ({ page }) =
 
 test('coverage menu selection updates preview area', async ({ page }) => {
 	await page.goto('/');
-	await page.getByRole('button', { name: 'Get Coverage' }).click();
+	await page.getByRole('button', { name: 'Products' }).click();
 
 	const previewTitle = page.locator('.cover-feature span');
 	const initialTitle = await previewTitle.textContent();
@@ -50,4 +50,3 @@ test('faq answer can be toggled open and closed', async ({ page }) => {
 	await faqButton.click();
 	await expect(faqButton).toHaveAttribute('aria-expanded', 'false');
 });
-
